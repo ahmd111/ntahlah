@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesi dalam Perspektif Al-Quran</title>
+    <link rel="shortcut icon" href="./download (1).jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a5e63;
+            --secondary-color: #d1e7dd;
+            --accent-color: #4caf50;
+            --text-color: #333;
+            --light-text: #fff;
+            --card-bg: #fff;
+            --footer-bg: #0d4c52;
+            --bookmark-color: #ffd700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #2c8c92);
+            color: var(--light-text);
+            padding: 1.8rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-tab:hover, .nav-tab.active {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .search-container {
+            max-width: 800px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            padding-left: 50px;
+        }
+        
+        #searchInput:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(26, 94, 99, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 0 1.5rem;
+        }
+        
+        .category-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .profession-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .profession-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+        
+        .profession-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        
+        .bookmark-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .bookmark-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        .bookmark-btn.bookmarked {
+            color: var(--bookmark-color);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary-color), #2c8c92);
+            color: var(--light-text);
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .card-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.2rem;
+            opacity: 0.2;
+        }
+        
+        .card-body {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .verse {
+            background-color: var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            position: relative;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .verse-reference {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 0.8rem;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .quote-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .quote-title {
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .quote-box {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            font-style: italic;
+            position: relative;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .quote-person {
+            margin-top: 0.5rem;
+            text-align: right;
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .explanation {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #ddd;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+        
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-quote {
+            font-style: italic;
+            margin: 1.5rem 0;
+            padding: 0 1rem;
+            opacity: 0.9;
+        }
+        
+        .result-count {
+            text-align: center;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .bookmarks-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        
+        .bookmarks-placeholder {
+            text-align: center;
+            padding: 3rem;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            color: #666;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .loading-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .loading-dots div {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        
+        .loading-dots div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-dots div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            .profession-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .categories, .nav-tabs {
+                gap: 0.7rem;
+            }
+            
+            .category-btn, .nav-tab {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .notification {
+                left: 20px;
+                right: 20px;
+                transform: translateY(-100px);
+            }
+            
+            .notification.show {
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 1.5rem 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .search-container {
+                margin: 1.5rem auto;
+            }
+            
+            .category-btn, .nav-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .card-header {
+                padding: 1.2rem;
+            }
+            
+            .card-body {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-pattern"></div>
+        <div class="header-content">
+            <h1>Profesi dalam Perspektif Al-Quran</h1>
+            <p class="subtitle">Menggali panduan ilahi untuk berbagai bidang pekerjaan umum dalam kehidupan</p>
+        </div>
+    </header>
+    
+    <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="professions"><i class="fas fa-briefcase"></i> Daftar Profesi</button>
+        <button class="nav-tab" data-tab="bookmarks"><i class="fas fa-bookmark"></i> Bookmark</button>
+    </div>
+    
+    <div id="professionsTab">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Cari profesi atau ayat...">
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active" data-category="all"><i class="fas fa-layer-group"></i> Semua</button>
+            <button class="category-btn" data-category="kesehatan"><i class="fas fa-heartbeat"></i> Kesehatan</button>
+            <button class="category-btn" data-category="pendidikan"><i class="fas fa-graduation-cap"></i> Pendidikan</button>
+            <button class="category-btn" data-category="bisnis"><i class="fas fa-chart-line"></i> Bisnis</button>
+            <button class="category-btn" data-category="teknologi"><i class="fas fa-laptop-code"></i> Teknologi</button>
+            <button class="category-btn" data-category="sosial"><i class="fas fa-hands-helping"></i> Sosial</button>
+            <button class="category-btn" data-category="pemerintahan"><i class="fas fa-landmark"></i> Pemerintahan</button>
+            <button class="category-btn" data-category="pertanian"><i class="fas fa-tractor"></i> Pertanian</button>
+        </div>
+        
+        <div class="result-count" id="resultCount"></div>
+        
+        <div class="profession-container" id="professionContainer">
+            <div class="loading">
+                <div class="loading-dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="bookmarksTab" class="hidden">
+        <div class="bookmarks-container">
+            <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);"><i class="fas fa-bookmark"></i> Profesi yang Dibuukmark</h2>
+            <div id="bookmarksList" class="profession-container">
+                <div class="bookmarks-placeholder">
+                    <i class="fas fa-bookmark" style="font-size: 3rem; margin-bottom: 1rem; color: #ccc;"></i>
+                    <h3>Belum ada bookmark</h3>
+                    <p>Klik ikon bookmark pada kartu profesi untuk menambahkannya ke sini</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Riset Profesi dalam Al-Quran - Sebuah Kajian untuk Santri</p>
+            <p class="footer-quote">"Hai orang-orang yang beriman, apabila dikatakan kepadamu: 'Berlapang-lapanglah dalam majlis', maka lapangkanlah, niscaya Allah akan memberi kelapangan untukmu." (QS. Al-Mujadilah: 11)</p>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText"></span>
+    </div>
+
+    <script>
+        // Data profesi dan ayat-ayat pendukung
+        const professions = [
+            {
+                id: 1,
+                title: "Dokter & Tenaga Medis",
+                category: "kesehatan",
+                icon: "fa-user-md",
+                verses: [
+                    {
+                        text: "Dan apabila aku sakit, Dialah Yang menyembuhkan aku.",
+                        reference: "QS. Asy-Syu'ara' (26): 80"
+                    },
+                    {
+                        text: "Barangsiapa yang menyelamatkan satu jiwa, maka seakan-akan dia telah menyelamatkan manusia seluruhnya.",
+                        reference: "QS. Al-Maidah (5): 32"
+                    }
+                ],
+                explanation: "Profesi dokter dan tenaga medis sangat mulia dalam Islam karena berhubungan dengan penyelamatan nyawa dan pengobatan penyakit, yang merupakan bentuk pengamalan perintah Allah untuk menjaga kehidupan.",
+                quote: "Kesehatan adalah mahkota yang tidak terlihat, yang hanya dapat dilihat oleh mereka yang sakit.",
+                quotePerson: "Ibnu Sina (Bapak Kedokteran Modern)"
+            },
+            {
+                id: 2,
+                title: "Guru & Pendidik",
+                category: "pendidikan",
+                icon: "fa-chalkboard-teacher",
+                verses: [
+                    {
+                        text: "Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.",
+                        reference: "QS. Al-Mujadilah (58): 11"
+                    },
+                    {
+                        text: "Bacalah dengan (menyebut) nama Tuhanmu Yang menciptakan. Dia telah menciptakan manusia dari segumpal darah. Bacalah, dan Tuhanmulah Yang Maha Pemurah. Yang mengajar (manusia) dengan perantaran kalam.",
+                        reference: "QS. Al-Alaq (96): 1-4"
+                    }
+                ],
+                explanation: "Guru memiliki kedudukan yang sangat tinggi dalam Islam karena peran mereka dalam mencerdaskan umat dan menyebarkan ilmu pengetahuan, yang merupakan perintah pertama Allah dalam Al-Quran.",
+                quote: "Didiklah anak-anakmu sesuai dengan zamannya, karena mereka hidup di zaman mereka, bukan pada zamanmu.",
+                quotePerson: "Ali bin Abi Thalib"
+            },
+            {
+                id: 3,
+                title: "Pengusaha & Wirausaha",
+                category: "bisnis",
+                icon: "fa-store",
+                verses: [
+                    {
+                        text: "Hai orang-orang yang beriman, janganlah kamu saling memakan harta sesamamu dengan jalan yang batil, kecuali dengan jalan perniagaan yang berlaku dengan suka sama-suka di antara kamu.",
+                        reference: "QS. An-Nisa (4): 29"
+                    },
+                    {
+                        text: "Allah telah menghalalkan jual beli dan mengharamkan riba.",
+                        reference: "QS. Al-Baqarah (2): 275"
+                    }
+                ],
+                explanation: "Bisnis dan perdagangan yang jujur dan adil sangat dianjurkan dalam Islam. Nabi Muhammad SAW sendiri adalah seorang pedagang sebelum menjadi Nabi, menunjukkan mulianya profesi ini.",
+                quote: "Pedagang yang jujur dan terpercaya akan bersama para nabi, orang-orang shiddiq, dan syuhada.",
+                quotePerson: "HR. Tirmidzi"
+            },
+            {
+                id: 4,
+                title: "Ilmuwan & Peneliti",
+                category: "teknologi",
+                icon: "fa-microscope",
+                verses: [
+                    {
+                        text: "Katakanlah: 'Adakah sama orang-orang yang mengetahui dengan orang-orang yang tidak mengetahui?' Sesungguhnya orang yang berakallah yang dapat menerima pelajaran.",
+                        reference: "QS. Az-Zumar (39): 9"
+                    },
+                    {
+                        text: "Maka apakah mereka tidak memperhatikan unta, bagaimana dia diciptakan? Dan langit, bagaimana ia ditinggikan? Dan gunung-gunung, bagaimana ia ditegakkan? Dan bumi, bagaimana ia dihamparkan?",
+                        reference: "QS. Al-Ghasyiyah (88): 17-20"
+                    }
+                ],
+                explanation: "Islam mendorong umatnya untuk meneliti dan mempelajari alam semesta sebagai tanda kebesaran Allah. Ilmuwan dan peneliti melakukan tugas mulia dengan menggali pengetahuan untuk kemaslahatan umat manusia.",
+                quote: "Ilmu adalah kehidupan bagi pikiran dan cahaya bagi akal yang membimbing kepada kebenaran.",
+                quotePerson: "Al-Kindi (Filsuf Muslim)"
+            },
+            {
+                id: 5,
+                title: "Petani & Pekebun",
+                category: "pertanian",
+                icon: "fa-seedling",
+                verses: [
+                    {
+                        text: "Dialah Yang telah menurunkan air hujan dari langit untuk kamu, sebagiannya menjadi minuman dan sebagiannya (menyuburkan) tumbuhan, yang pada (tempat tumbuhnya) kamu menggembalakan ternakmu.",
+                        reference: "QS. An-Nahl (16): 10"
+                    },
+                    {
+                        text: "Dan Dialah yang menurunkan air hujan dari langit, lalu Kami tumbuhkan dengan air itu segala macam tumbuh-tumbuhan, maka Kami keluarkan dari tumbuh-tumbuhan itu tanaman yang menghijau.",
+                        reference: "QS. Al-An'am (6): 99"
+                    }
+                ],
+                explanation: "Bercocok tanam dan mengelola bumi merupakan profesi yang sangat dianjurkan dalam Islam. Rasulullah SAW bersabda bahwa tidaklah seorang muslim menanam tanaman lalu dimakan oleh manusia, binatang atau burung, melainkan itu menjadi sedekah baginya.",
+                quote: "Bumi menyediakan cukup untuk memenuhi kebutuhan setiap orang, tetapi tidak untuk memenuhi keserakahan setiap orang.",
+                quotePerson: "Mahatma Gandhi (terinspirasi nilai Islam)"
+            },
+            {
+                id: 6,
+                title: "Pemimpin & Gubernur",
+                category: "pemerintahan",
+                icon: "fa-crown",
+                verses: [
+                    {
+                        text: "Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak menerimanya, dan (menyuruh kamu) apabila menetapkan hukum di antara manusia supaya kamu menetapkan dengan adil.",
+                        reference: "QS. An-Nisa (4): 58"
+                    },
+                    {
+                        text: "Hai Daud, sesungguhnya Kami menjadikan kamu khalifah (penguasa) di muka bumi, maka berilah keputusan (perkara) di antara manusia dengan adil dan janganlah kamu mengikuti hawa nafsu.",
+                        reference: "QS. Sad (38): 26"
+                    }
+                ],
+                explanation: "Kepemimpinan dalam Islam adalah amanah yang harus dijalankan dengan keadilan dan tanggung jawab. Pemimpin yang adil akan mendapat tempat yang mulia di sisi Allah.",
+                quote: "Pemimpin suatu kaum adalah pelayan mereka.",
+                quotePerson: "Ali bin Abi Thalib"
+            },
+            {
+                id: 7,
+                title: "Ustadz & Dai",
+                category: "pendidikan",
+                icon: "fa-mosque",
+                verses: [
+                    {
+                        text: "Serulah (manusia) kepada jalan Tuhan-mu dengan hikmah dan pelajaran yang baik dan bantahlah mereka dengan cara yang baik.",
+                        reference: "QS. An-Nahl (16): 125"
+                    },
+                    {
+                        text: "Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, mengerjakan amal yang saleh, dan berkata: 'Sesungguhnya aku termasuk orang-orang yang menyerah diri?'",
+                        reference: "QS. Fussilat (41): 33"
+                    }
+                ],
+                explanation: "Menyampaikan ajaran Islam dan membimbing umat adalah tugas mulia yang memiliki pahala besar. Seorang dai harus memiliki ilmu yang cukup dan akhlak yang baik.",
+                quote: "Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya.",
+                quotePerson: "Rasulullah SAW"
+            },
+            {
+                id: 8,
+                title: "Polisi & Tentara",
+                category: "sosial",
+                icon: "fa-shield-alt",
+                verses: [
+                    {
+                        text: "Sesungguhnya Allah menyukai orang yang berperang dijalan-Nya dalam barisan yang teratur seakan-akan mereka seperti suatu bangunan yang tersusun kokoh.",
+                        reference: "QS. As-Saff (61): 4"
+                    },
+                    {
+                        text: "Dan siapkanlah untuk menghadapi mereka kekuatan apa saja yang kamu sanggupi dan dari kuda-kuda yang ditambat untuk berperang (yang dengan persiapan itu) kamu menggentarkan musuh Allah dan musuhmu.",
+                        reference: "QS. Al-Anfal (8): 60"
+                    }
+                ],
+                explanation: "Menjaga keamanan dan ketertiban masyarakat adalah tugas mulia dalam Islam. Polisi dan tentara bertugas melindungi negara dan rakyat dari ancaman, yang merupakan bagian dari amar ma'ruf nahi munkar.",
+                quote: "Keberanian bukan hanya fisik, tetapi juga moral. Keberanian untuk membela kebenaran adalah puncak keberanian.",
+                quotePerson: "Saladin (Pahlawan Islam)"
+            }
+        ];
+
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Fungsi untuk menampilkan profesi
+        function displayProfessions(professionsToShow) {
+            const container = document.getElementById('professionContainer');
+            
+            if (professionsToShow.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #666;">
+                        <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h3>Tidak ada profesi yang ditemukan</h3>
+                        <p>Coba gunakan kata kunci pencarian yang berbeda atau pilih kategori lain</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let cardsHTML = '';
+            
+            professionsToShow.forEach(profession => {
+                const isBookmarked = bookmarks.includes(profession.id);
+                
+                let versesHTML = '';
+                profession.verses.forEach(verse => {
+                    versesHTML += `
+                        <div class="verse">
+                            <p>"${verse.text}"</p>
+                            <div class="verse-reference">${verse.reference}</div>
+                        </div>
+                    `;
+                });
+                
+                let quoteHTML = '';
+                if (profession.quote) {
+                    quoteHTML = `
+                        <div class="quote-section">
+                            <div class="quote-title">
+                                <i class="fas fa-quote-left"></i> Quote Inspirasi
+                            </div>
+                            <div class="quote-box">
+                                <p>"${profession.quote}"</p>
+                                <div class="quote-person">- ${profession.quotePerson}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                cardsHTML += `
+                    <div class="profession-card" data-category="${profession.category}" data-id="${profession.id}">
+                        <button class="bookmark-btn ${isBookmarked ? 'bookmarked' : ''}" data-id="${profession.id}">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                        <div class="card-header">
+                            <h3>${profession.title}</h3>
+                            <i class="fas ${profession.icon} card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            ${versesHTML}
+                            ${quoteHTML}
+                            <div class="explanation">
+                                <p>${profession.explanation}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = cardsHTML;
+            
+            // Add event listeners to bookmark buttons
+            document.querySelectorAll('.bookmark-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const id = parseInt(this.dataset.id);
+                    const wasBookmarked = this.classList.contains('bookmarked');
+                    toggleBookmark(id);
+                    
+                    if (wasBookmarked) {
+                        showNotification('Bookmark dihapus');
+                    } else {
+                        showNotification('Bookmark ditambahkan');
+                    }
+                });
+            });
+            
+            // Update result count
+            document.getElementById('resultCount').textContent = `Menampilkan ${professionsToShow.length} dari ${professions.length} profesi`;
+        }
+        
+        // Fungsi untuk menampilkan bookmark
+        function displayBookmarks() {
+            const container = document.getElementById('bookmarksList');
+            
+            if (bookmarks.length === 0) {
+                container.innerHTML = `
+                    <div class="bookmarks-placeholder">
+                        <i class="fas fa-bookmark" style="font-size: 3rem; margin-bottom: 1rem; color: #ccc;"></i>
+                        <h3>Belum ada bookmark</h3>
+                        <p>Klik ikon bookmark pada kartu profesi untuk menambahkannya ke sini</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let cardsHTML = '';
+            const bookmarkedProfessions = professions.filter(p => bookmarks.includes(p.id));
+            
+            bookmarkedProfessions.forEach(profession => {
+                let versesHTML = '';
+                profession.verses.forEach(verse => {
+                    versesHTML += `
+                        <div class="verse">
+                            <p>"${verse.text}"</p>
+                            <div class="verse-reference">${verse.reference}</div>
+                        </div>
+                    `;
+                });
+                
+                let quoteHTML = '';
+                if (profession.quote) {
+                    quoteHTML = `
+                        <div class="quote-section">
+                            <div class="quote-title">
+                                <i class="fas fa-quote-left"></i> Quote Inspirasi
+                            </div>
+                            <div class="quote-box">
+                                <p>"${profession.quote}"</p>
+                                <div class="quote-person">- ${profession.quotePerson}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                cardsHTML += `
+                    <div class="profession-card" data-category="${profession.category}" data-id="${profession.id}">
+                        <button class="bookmark-btn bookmarked" data-id="${profession.id}">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                        <div class="card-header">
+                            <h3>${profession.title}</h3>
+                            <i class="fas ${profession.icon} card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            ${versesHTML}
+                            ${quoteHTML}
+                            <div class="explanation">
+                                <p>${profession.explanation}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = cardsHTML;
+            
+            // Add event listeners to bookmark buttons
+            document.querySelectorAll('.bookmark-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const id = parseInt(this.dataset.id);
+                    toggleBookmark(id);
+                    showNotification('Bookmark dihapus');
+                    displayBookmarks(); // Refresh bookmarks view
+                });
+            });
+        }
+        
+        // Fungsi untuk mencari dan memfilter
+        function filterProfessions() {
+            const searchText = document.getElementById('searchInput').value.toLowerCase();
+            const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+            
+            let filteredProfessions = professions;
+            
+            // Filter berdasarkan kategori
+            if (activeCategory !== 'all') {
+                filteredProfessions = filteredProfessions.filter(profession => 
+                    profession.category === activeCategory
+                );
+            }
+            
+            // Filter berdasarkan pencarian
+            if (searchText) {
+                filteredProfessions = filteredProfessions.filter(profession => {
+                    const titleMatch = profession.title.toLowerCase().includes(searchText);
+                    
+                    let verseMatch = false;
+                    profession.verses.forEach(verse => {
+                        if (verse.text.toLowerCase().includes(searchText) || 
+                            verse.reference.toLowerCase().includes(searchText)) {
+                            verseMatch = true;
+                        }
+                    });
+                    
+                    const quoteMatch = profession.quote && profession.quote.toLowerCase().includes(searchText);
+                    const explanationMatch = profession.explanation.toLowerCase().includes(searchText);
+                    
+                    return titleMatch || verseMatch || quoteMatch || explanationMatch;
+                });
+            }
+            
+            displayProfessions(filteredProfessions);
+        }
+        
+        // Bookmark functionality
+        let bookmarks = JSON.parse(localStorage.getItem('professionBookmarks')) || [];
+        
+        function toggleBookmark(id) {
+            const index = bookmarks.indexOf(id);
+            if (index === -1) {
+                bookmarks.push(id);
+            } else {
+                bookmarks.splice(index, 1);
+            }
+            localStorage.setItem('professionBookmarks', JSON.stringify(bookmarks));
+            
+            // Update bookmark buttons in professions tab
+            document.querySelectorAll(`.bookmark-btn[data-id="${id}"]`).forEach(btn => {
+                btn.classList.toggle('bookmarked');
+            });
+        }
+        
+        // Tab functionality
+        function switchTab(tabName) {
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.nav-tab[data-tab="${tabName}"]`).classList.add('active');
+            
+            document.getElementById('professionsTab').classList.toggle('hidden', tabName !== 'professions');
+            document.getElementById('bookmarksTab').classList.toggle('hidden', tabName !== 'bookmarks');
+            
+            if (tabName === 'bookmarks') {
+                displayBookmarks();
+            } else {
+                filterProfessions();
+            }
+        }
+        
+        // Inisialisasi
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tampilkan semua profesi pertama kali setelah delay kecil untuk loading effect
+            setTimeout(() => {
+                displayProfessions(professions);
+            }, 800);
+            
+            // Event listener untuk pencarian
+            document.getElementById('searchInput').addEventListener('input', filterProfessions);
+            
+            // Event listener untuk kategori
+            document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProfessions();
+                });
+            });
+            
+            // Event listener untuk tab
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switchTab(this.dataset.tab);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
